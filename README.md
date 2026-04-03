@@ -1,7 +1,17 @@
 # Finance Dashboard
 
-A modern, responsive **Finance Dashboard** built with **Next.js 13**, **TypeScript**, and **Tailwind CSS**.  
+A modern, responsive **Finance Dashboard** built with **Next.js**, **TypeScript**, and **Tailwind CSS**.  
 This dashboard allows users to track income and expenses, visualize trends, filter transactions, and manage data with admin privileges.
+
+## 🔹 Live Demo
+
+[View Live Demo] https://finance-dashboard-delta-ashy.vercel.app
+
+## 🔹 GitHub Repository
+
+[View on GitHub] https://github.com/karusaini/finance-dashboard
+
+---
 
 ---
 
