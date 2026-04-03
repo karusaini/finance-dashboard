@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Finance Dashboard
 
-## Getting Started
+A modern, responsive **Finance Dashboard** built with **Next.js 13**, **TypeScript**, and **Tailwind CSS**.  
+This dashboard allows users to track income and expenses, visualize trends, filter transactions, and manage data with admin privileges.
 
-First, run the development server:
+---
+
+## 🔹 Features
+
+- **User Roles**
+  - `viewer`: Can only view transactions and charts.
+  - `admin`: Can add, edit, and delete transactions.
+- **Dark Mode Toggle**
+- **Dashboard Components**
+  - Summary Cards (Income, Expense, Balance)
+  - Balance Trend Line Chart
+  - Spending Breakdown Pie Chart
+- **Transaction Management**
+  - Add / Edit / Delete transactions (admin only)
+  - Search and filter transactions by type and category
+- **Responsive UI**
+  - Fully mobile-friendly
+  - Grid layout for cards and charts on large screens
+  - Collapsible tables and modals on small screens
+- **Animations & Hover Effects**
+  - Modal animations
+  - Hover highlight for table rows
+  - Smooth UI transitions
+
+---
+
+## 🔹 Tech Stack
+
+- **Next.js** (App Router, React Server Components)
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **Recharts** for charts
+- **Zustand** for state management
+- **Radix UI / Base UI** for accessible components
+
+---
+
+## 🔹 Installation
+
+1. Clone the repository:
 
 ```bash
+git clone https://github.com/karusaini/finance-dashboard.git
+cd finance-dashboard
+
+Install dependencies:
+npm install
+# or
+yarn install
+Run the development server:
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+Open http://localhost:3000
+ in your browser.
+
+
+ Project Structure
+src/
+ ├─ app/
+ │   ├─ dashboard/       # Dashboard page with summary cards & charts
+ │   ├─ transactions/    # Transactions page with filters & table
+ ├─ components/
+ │   ├─ ui/              # Reusable UI components (Button, Card, Dialog, Table)
+ │   ├─ shared/          # Navbar, ThemeToggle, RoleSwitcher
+ │   └─ transactions/    # TransactionForm, AddTransactionModal, EditTransactionModal, Filters
+ ├─ store/
+ │   └─ useTransactionStore.ts  # Zustand store for transactions & roles
+ ├─ types/
+ │   └─ transaction.ts          # Transaction type
+ └─ data/
+     └─ transactions.ts         # Mock transaction data
+
+
+usage
+
+Role Switching
+Use the role switcher in the navbar to toggle between viewer and admin.
+Add Transaction (Admin Only)
+Click Add Transaction on the Transactions page.
+Fill in amount, category, and type (Income/Expense).
+Edit/Delete Transaction (Admin Only)
+Use Edit and Delete buttons in the transactions table.
+Filtering & Searching
+Filter by type or category using the dropdowns.
+Search transactions by category or amount using the search input.
+Dashboard
+View balance trends and spending breakdown in charts.
+Summary cards show total income, total expense, and balance.
+
+
+
+Future Improvements**
+
+
+Connect to a real backend (Next.js API routes / Supabase / Firebase).
+User authentication and persistent storage.
+Export transactions as CSV or PDF.
+Advanced analytics: monthly reports, recurring expenses, etc.
+More chart types (bar charts, area charts, etc.).
+Smooth animations for card counters.
+
+
+License
+
+This project is licensed under the MIT License.
+
+Built with ❤️ using Next.js, Tailwind CSS, and React.
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
