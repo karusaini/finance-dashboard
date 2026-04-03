@@ -22,7 +22,7 @@ export default function EditTransactionModal({ tx }: Props) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger>
-        <Button size="sm" variant="ghost ">
+        <Button size="sm" variant="ghost">
           Edit
         </Button>
       </DialogTrigger>

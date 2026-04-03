@@ -57,7 +57,7 @@ export default function TransactionFilters({
 
         {/* 📂 Category Filter */}
         <Select value={categoryFilter} onValueChange={setCategoryFilter}>
-          <SelectTrigger className="w-full md:w-[180px] h-10 rounded-lg">
+          <SelectTrigger className="w-full md:w-45 h-10 rounded-lg">
             <SelectValue placeholder="Category" />
           </SelectTrigger>
           <SelectContent>
