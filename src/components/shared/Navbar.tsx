@@ -21,7 +21,7 @@ export default function Navbar() {
     <nav className="border-b dark:border-gray-700 p-4">
       <div className="flex justify-between items-center">
         {/* Brand / Logo */}
-        <div className="text-lg font-bold">Finance Dashboard</div>
+        <div className="text-lg font-bold ">Finance Dashboard</div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-4 items-center">

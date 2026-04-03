@@ -44,24 +44,29 @@ export default function TransactionFilters({
         </div>
 
         {/* 🧃 Type Filter */}
-        <Select value={typeFilter} onValueChange={setTypeFilter}>
+        <Select
+          value={typeFilter}
+          onValueChange={(val) => val && setTypeFilter(val)}
+        >
           <SelectTrigger className="w-full md:w-40 h-10 rounded-lg">
             <SelectValue placeholder="Type" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All Types</SelectItem>
+            <SelectItem value="all">All</SelectItem>
             <SelectItem value="income">Income</SelectItem>
             <SelectItem value="expense">Expense</SelectItem>
           </SelectContent>
         </Select>
 
-        {/* 📂 Category Filter */}
-        <Select value={categoryFilter} onValueChange={setCategoryFilter}>
-          <SelectTrigger className="w-full md:w-45 h-10 rounded-lg">
+        <Select
+          value={categoryFilter}
+          onValueChange={(val) => val && setCategoryFilter(val)}
+        >
+          <SelectTrigger className="w-full md:w-40 h-10 rounded-lg">
             <SelectValue placeholder="Category" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All Categories</SelectItem>
+            <SelectItem value="all">All</SelectItem>
             <SelectItem value="Food">Food</SelectItem>
             <SelectItem value="Salary">Salary</SelectItem>
             <SelectItem value="Freelance">Freelance</SelectItem>
